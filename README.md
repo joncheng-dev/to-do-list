@@ -32,7 +32,7 @@ Expected Output:
 completed: false, 
 id: 1}
  
-Describe Task.prototype.isComp
+Describe: Task.prototype.isComp
 Test 1: "it should allow user to mark task as complete with a boolean"
 Code: 
   taskOne.isComp();
@@ -40,3 +40,12 @@ Code:
 Expected output: {taskName: "Go to the park", 
 completed: true, 
 id: 1}
+
+Describe: Task.prototype.deleteTask
+Test 1: "It should remove a task from the tasks property."
+Code: todaysChores.deleteTask(1);
+todaysChores;
+Expected Output: {taskName: "Go to the mall", 
+completed: false, 
+id: 2}
+
