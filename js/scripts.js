@@ -1,5 +1,6 @@
 function ToDoList(){
     this.tasks = {};
+    this.currentId = 0;
 }
 
 function Task(name, completionStatus) {
@@ -8,10 +9,19 @@ function Task(name, completionStatus) {
 }
 
 ToDoList.prototype.addTask = function(newTask) {
-    this.tasks[newTask.taskName] = newTask;
+    newTask.id = this.assignId();
+    this.tasks[newTask.id] = newTask;
+}
+
+ToDoList.prototype.assignId = function() {
+    this.currentId += 1;
+    return this.currentId;
 }
 
 let todaysChores = new ToDoList();
 
 let taskOne = new Task("Go to the park", false);
 let taskTwo = new Task("Go to the mall", false);
+
+todaysChores.addTask(taskOne);
+todaysChores.addTask(taskTwo);
