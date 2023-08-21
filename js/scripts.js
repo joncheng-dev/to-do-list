@@ -18,6 +18,10 @@ ToDoList.prototype.assignId = function() {
     return this.currentId;
 }
 
+Task.prototype.isComp = function() {
+  this.completed = true;
+}
+
 let todaysChores = new ToDoList();
 
 let taskOne = new Task("Go to the park", false);
