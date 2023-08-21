@@ -12,3 +12,11 @@ Describe: ToDoList():
 Test 1: "It should initialize a ToDoList constructor function which should contain an object to hold tasks."
 Code: ToDoList();
 Expected Output: this.tasks = {};
+
+
+Describe: Task();
+Test 1: "It should initialize a Task constructor function, which should create an instance of a task, which takes two arguments, storing them as properties in the created object." 
+Code: Task("walk the dog", false);
+Expected Output: 
+{completed: false
+ taskName: "walk the dog"}
