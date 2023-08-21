@@ -32,4 +32,11 @@ Expected Output:
 completed: false, 
 id: 1}
  
-
+Describe Task.prototype.isComp
+Test 1: "it should allow user to mark task as complete with a boolean"
+Code: 
+  taskOne.isComp();
+  taskOne;
+Expected output: {taskName: "Go to the park", 
+completed: true, 
+id: 1}
