@@ -22,6 +22,13 @@ Task.prototype.isComp = function() {
   this.completed = true;
 }
 
+ToDoList.prototype.deleteTask = function(id) {
+    if (this.tasks[id] === undefined) {
+        return false;
+    } delete this.tasks[id];
+    return true;
+};
+
 let todaysChores = new ToDoList();
 
 let taskOne = new Task("Go to the park", false);
@@ -29,3 +36,4 @@ let taskTwo = new Task("Go to the mall", false);
 
 todaysChores.addTask(taskOne);
 todaysChores.addTask(taskTwo);
+
