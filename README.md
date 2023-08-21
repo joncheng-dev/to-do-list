@@ -12,11 +12,6 @@ Test 1: "It should initialize a ToDoList constructor function which should conta
 Code: ToDoList();
 Expected Output: this.tasks = {};
 
-<!-- Describe: ToDoList.prototype.assignId 
-Test 1: "It should assign an ID to each individual task and allow the ID to be incremented"
-Code: Task("walk the dog")
-Expected Output:  -->
-
 Describe: Task();
 Test 1: "It should initialize a Task constructor function, which should create an instance of a task, which takes two arguments, storing them as properties in the created object." 
 Code: Task("walk the dog", false);
@@ -29,5 +24,12 @@ Expected Output:
  Code: ToDoList.prototype.addTask(taskOne);
  Expected Output: ("Go to the park", false);
 
+Describe: ToDoList.prototype.assignId 
+Test 1: "It should assign an ID to each individual task and allow the ID to be incremented in the property this.tasks found in the instance of the ToDoList object."
+Code: taskOne;
+Expected Output: 
+{taskName: "Go to the park", 
+completed: false, 
+id: 0}
  
 
