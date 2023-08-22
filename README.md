@@ -41,7 +41,7 @@ Expected output: {taskName: "Go to the park",
 completed: true, 
 id: 1}
 
-Describe: Task.prototype.deleteTask
+Describe: ToDoList.prototype.deleteTask
 Test 1: "It should remove a task from the tasks property."
 Code: todaysChores.deleteTask(1);
 todaysChores;

@@ -1,3 +1,4 @@
+// Business Logic
 function ToDoList(){
     this.tasks = {};
     this.currentId = 0;
@@ -29,11 +30,30 @@ ToDoList.prototype.deleteTask = function(id) {
     return true;
 };
 
-let todaysChores = new ToDoList();
 
-let taskOne = new Task("Go to the park", false);
-let taskTwo = new Task("Go to the mall", false);
 
-todaysChores.addTask(taskOne);
-todaysChores.addTask(taskTwo);
+// User Interface Logic
+window.addEventListener("load", formLoader);
 
+function formLoader() {
+    let userForm = document.querySelector("form");
+    userForm.addEventListener("submit", formSubmissionHandler);
+}
+
+function formSubmissionHandler(event) {
+    event.preventDefault();
+
+    let todaysChores = new ToDoList();
+
+    let taskOne = new Task("Go to the park", false);
+    let taskTwo = new Task("Go to the mall", false);
+
+    todaysChores.addTask(taskOne);
+    todaysChores.addTask(taskTwo);
+
+    // let todaysChores = newToDoList();
+    // let userEnteredTask = document.getElementById("task-input").value;
+    // todaysChores.addTask(userEnteredTask);
+    document.querySelector("p").innerText = todaysChores.tasks[1].taskName;
+    
+}
